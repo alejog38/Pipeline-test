@@ -13,8 +13,6 @@ jobs:
     resource_class: small
     steps:
       - checkout
-      - setup_remote_docker:
-          version: 3.5.0
       - run: mvn clean compile
       - run: mvn test
       - run: mvn deploy
